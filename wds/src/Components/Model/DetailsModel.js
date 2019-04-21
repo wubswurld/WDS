@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import SignInPage, { SignInForm } from '../SignIn/SignIn';
-import SignIn from '../SignIn/SignIn';
 
-class Modalexport extends Component {
+class DetailsModel extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,11 +19,13 @@ class Modalexport extends Component {
   render() {
     return (
       <div className="signin">
-        <Button outline color="primary" size="sm" id="login" onClick={this.toggle}>{this.props.buttonLabel}Login</Button>
+        <Button outline color="primary" size="sm" id="login" onClick={this.toggle}>{this.props.buttonLabel}More Details</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} id="modal">
-          <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
+          <ModalHeader toggle={this.toggle}>package Name</ModalHeader>
           <ModalBody>
-              <SignInForm></SignInForm>
+              <div>
+
+              </div>
           </ModalBody>
         </Modal>
       </div>
@@ -33,4 +33,4 @@ class Modalexport extends Component {
   }
 }
 
-export default Modalexport;
+export default DetailsModel;
