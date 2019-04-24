@@ -40,9 +40,12 @@ class firebase {
     doPasswordUpdate = password =>
       this.auth.currentUser.updatePassword(password);
     
+    //gets uid as var.
     user = uid => this.db.ref(`users/${uid}`);
+    //references the users portion of realtime db 
     users = () => this.db.ref('users');
-    packages = () => this.db.ref('SS');
+    SSref = () => this.db.ref("SS");
+    SS = name => this.db.ref(`SS/${name}`);
 }
 
 export default firebase;
