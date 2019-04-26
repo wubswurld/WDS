@@ -14,8 +14,6 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import AuthLinks from './AuthLinks';
-import NoAuthLinks from './NoAuthLinks';
 // import SignOutButton from '../SignOut';
 import SignOutButton from '../signOut/index';
 import Modalexport from '../Model/Model';
@@ -30,6 +28,7 @@ import {  Collapse,
     DropdownToggle,
     DropdownMenu,
     DropdownItem } from 'reactstrap';
+import Changeexport from '../Model/ChangePassword';
 
 const Navigation = ({ authUser }) => (
     <Navbar color="lightblue" light expand="md" id="navb">
@@ -77,6 +76,9 @@ class NavigationAuth extends Component {
                            </DropdownItem>
                            <DropdownItem>
                            <NavLink href="">Account Info</NavLink>
+                           </DropdownItem>
+                           <DropdownItem>
+                           <Changeexport></Changeexport>
                            </DropdownItem>
                          </DropdownMenu>
                        </UncontrolledDropdown>

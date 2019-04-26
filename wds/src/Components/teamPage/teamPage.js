@@ -14,13 +14,13 @@ class TeamPage extends Component {
                                 </div>
                                 <div className="team-hover">
                                     <div className="desk">
-                                        <h4>Hi There !</h4>
-                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                        <h4>Hello There!</h4>
+                                        <p>I am Elliot Friedman, I have over two years of Smart Contract and DAPP experience!</p>
                                     </div>
                                     <div className="s-link">
                                         <a href="#"><i className="fab fa-facebook"></i></a>
                                         <a href="#"><i className="fab fa-linkedin"></i></a>
-                                        <a href="#"><i className="fab fa-github"></i></a>
+                                        <a href="https://github.com/ElliotFriedman"><i className="fab fa-github"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -36,13 +36,13 @@ class TeamPage extends Component {
                                 </div>
                                 <div className="team-hover">
                                     <div className="desk">
-                                        <h4>Hello World</h4>
-                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                        <h4>Hi</h4>
+                                        <p>I Founded Scalable Solutions to bring you high quality Internet needs at a fraction of the cost!</p>
                                     </div>
                                     <div className="s-link">
-                                        <a href="#"><i className="fab fa-facebook"></i></a>
-                                        <a href="#"><i className="fab fa-linkedin"></i></a>
-                                        <a href="#"><i className="fab fa-github"></i></a>
+                                        <a href="https://www.facebook.com/jackwatters123"><i className="fab fa-facebook"></i></a>
+                                        <a href="https://linkedin.com/in/jackkobewatters"><i className="fab fa-linkedin"></i></a>
+                                        <a href="https://github.com/wubswurld"><i className="fab fa-github"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -59,18 +59,18 @@ class TeamPage extends Component {
                                 <div className="team-hover">
                                     <div className="desk">
                                         <h4>I love to design</h4>
-                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                        <p>Any problem you give me, Ill Solve</p>
                                     </div>
                                     <div className="s-link">
                                         <a href="#"><i className="fab fa-facebook"></i></a>
                                         <a href="#"><i className="fab fa-linkedin"></i></a>
-                                        <a href="#"><i className="fab fa-github"></i></a>
+                                        <a href="https://github.com/cpk42"><i className="fab fa-github"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div className="team-title">
                                 <h5>Curtis Krommenhoek</h5>
-                                <span>Web Developer</span>
+                                <span>CO-Founder, Back-End Developer</span>
                             </div>
                         </div>
 

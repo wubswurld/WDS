@@ -45,7 +45,7 @@ class firebase {
     //references the users portion of realtime db 
     users = () => this.db.ref('users');
     SSref = () => this.db.ref("SS");
-    SS = name => this.db.ref(`SS/${name}`);
+    // SS = name => this.db.ref(`SS/packages/${name}`);
 }
 
 export default firebase;

@@ -2,33 +2,10 @@ import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import DetailsModel from '../Model/DetailsModel';
 import { withFirebase } from '../Firebase';
+import PayPalBtn from '../Checkout/paypal';
+import DraggableDialog from '../CheckoutModel/CheckoutModel';
+import RadioButtonsGroup from '../CheckoutModel/Select';
 
-// class Packs extends Component {
-//     render() {
-//         return(
-//             <>
-            // <Paper id="product">
-            //     <h3>price</h3>
-            //     <hr></hr>
-            //     <h4>title</h4>
-            //     <h5>info</h5>
-            // </Paper>
-            // <Paper id="product1">
-            //     <h3>price</h3>
-            //     <hr></hr>
-            //     <h4>title</h4>
-            //     <h5>info</h5>
-            // </Paper>
-            // <Paper id="product2">
-            //     <h3>price</h3>
-            //     <hr></hr>
-            //     <h4>title</h4>
-            //     <h5>info</h5>
-            // </Paper>   
-//           </>
-//         )
-//     }
-// }
 class Packs extends Component {
     constructor(props) {
         super(props);
@@ -64,25 +41,6 @@ class Packs extends Component {
             <div>
             {loading && <div>Loading ...</div>}
             <PackagesList SubPacks={SubPacks} />
-
-            {/* <Paper id="product">
-                <h3>price</h3>
-                <hr></hr>
-                <h4>title</h4>
-                <h5>info</h5>
-            </Paper>
-            <Paper id="product1">
-                <h3>price</h3>
-                <hr></hr>
-                <h4>title</h4>
-                <h5>info</h5>
-            </Paper>
-            <Paper id="product2">
-                <h3>price</h3>
-                <hr></hr>
-                <h4>title</h4>
-                <h5>info</h5>
-            </Paper>    */}
             </div>
         )
     }
@@ -91,26 +49,27 @@ const PackagesList = ({ SubPacks }) => (
     <>
       {SubPacks.map(SubPacks => (
         <div key={SubPacks} id="li1">
-          {/* <span>
-             {SubPacks.uid}
-          </span> */}
           <Paper id="product">
+                <img src={SubPacks.Basic.Img}></img>
                 <h3>{SubPacks.Basic.Price}</h3>
                 <hr></hr>
                 <h4>{SubPacks.Basic.name}</h4>
                 <h5>{SubPacks.Basic.Details}</h5>
+                <DraggableDialog></DraggableDialog>
             </Paper>
             <Paper id="product1">
                 <h3>{SubPacks.Premium.Price}</h3>
                 <hr></hr>
                 <h4>{SubPacks.Premium.name}</h4>
                 <h5>{SubPacks.Premium.Details}</h5>
+                <DraggableDialog></DraggableDialog>
             </Paper>
             <Paper id="product2">
                 <h3>{SubPacks.Super.Price}</h3>
                 <hr></hr>
                 <h4>{SubPacks.Super.name}</h4>
                 <h5>{SubPacks.Super.Details}</h5>
+                <DraggableDialog></DraggableDialog>
             </Paper> 
          </div>
       ))}
@@ -118,3 +77,6 @@ const PackagesList = ({ SubPacks }) => (
   );
 
 export default withFirebase(Packs);
+{/* <Button variant="outlined" color="primary" onClick={this.handleClickOpen} id="checkout" outlined color="inherit">
+Check Out!
+</Button> */}

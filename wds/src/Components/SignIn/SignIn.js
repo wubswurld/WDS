@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import { withFirebase } from '../Firebase';
 import { Form, Input, FormGroup, Label, Button } from 'reactstrap';
+import { PasswordForgetLink } from '../PasswordForget';
 
 const SignInPage = () => (
     <div>
@@ -21,12 +23,12 @@ class SignInFormBase extends Component {
     }
     onSubmit = event => {
       const { email, password } = this.state;
-  
       this.props.firebase
         .doSignInWithEmailAndPassword(email, password)
         .then(() => {
           this.setState({ ...INITIAL_STATE });
-        //   this.props.history.push('/about');
+          console.log(this.state)
+          this.props.history.push('/view');
         })
         .catch(error => {
           this.setState({ error });
@@ -41,45 +43,22 @@ class SignInFormBase extends Component {
         const isInvalid = password === '' || email === '';
       return (
         <form onSubmit={this.onSubmit}>
-          {/* <input
-            name="email"
-            value={email}
-            onChange={this.onChange}
-            type="text"
-            placeholder="Email Address"
-          /> */}
             <Label for="Email">Email</Label>
            <Input onChange={this.onChange} name="email" value={email} type="text" placeholder="Email Address" />
            <Label for="Password">Password</Label>
-            <Input name="password" onChange={this.onChange} type="password" placeholder="password" />
-          {/* <input
-            name="password"
-            value={password}
-            onChange={this.onChange}
-            type="password"
-            placeholder="Password"
-          /> */}
+            <Input name="password" onChange={this.onChange} value={password} type="password" placeholder="password" />
           <br></br>
           <Button outline color="primary" type="submit" disabled={isInvalid} className="signin">Sign In!</Button>
           {error && <p>{error.message}</p>}
+          <div id="password">
+          <PasswordForgetLink />
+          </div>
         </form>
-        // <Form onSubmit={this.onSubmit}>
-        //     <FormGroup>
-        //         <Label for="Email">Email</Label>
-        //         <Input onChange={this.onChange} name="email" value={email} type="text" placeholder="Email Address" />
-        //     </FormGroup>
-        //     <FormGroup>
-        //         <Label for="Password">Password</Label>
-        //         <Input name="password" onChange={this.onChange} type="password" placeholder="password" />
-        //     </FormGroup>
-        //     <br></br>
-        //     <Button outline color="primary" type="submit"className="signin">Sign In!</Button>
-        //     <Button color="danger" onClick={this.toggle} id="cancle">Cancel</Button>
-        //     {error && <p>{error.message}</p>}
-        // </Form>
       );
     }
   }
-const SignInForm = compose(withRouter,withFirebase,)(SignInFormBase);
-export { SignInForm };
+const SignInForm = compose(withRouter,withFirebase)(SignInFormBase);
+
 export default SignInPage;
+
+export { SignInForm };

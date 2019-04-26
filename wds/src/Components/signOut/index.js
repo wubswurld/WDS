@@ -3,10 +3,7 @@ import { Button } from 'reactstrap';
 import { withFirebase } from '../Firebase';
 
 const SignOutButton = ({ firebase }) => (
-  // <button type="button" onClick={firebase.doSignOut}>
-  //   Sign Out
-  // </button>
-  <Button outline color="primary" type="button" className="signOut" onClick={firebase.doSignOut}>
+  <Button outline color="primary" size="sm" type="button" className="signOut" id="signout" onClick={firebase.doSignOut}>
     Sign Out!
   </Button>
 );
