@@ -134,16 +134,17 @@
 #product {
   width: 300px;
   margin-left: 200px;
+  margin-top: 5%;
 }
 #product1 {
   width: 300px;
   margin-left: 570px;
-  margin-top: -9%;
+  margin-top: -37%;
 }
 #product2 {
   width: 300px;
   margin-left: 950px;
-  margin-top: -9.2%;
+  margin-top: -35.5%;
 }
 #navb {
   background-color: white;
@@ -295,4 +296,9 @@
 #checkout {
   margin: 3%;
   color: green;
+}
+
+#super {
+  width:300px;
+  padding: 5px;
 }

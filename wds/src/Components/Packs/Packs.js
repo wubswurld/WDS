@@ -5,6 +5,7 @@ import { withFirebase } from '../Firebase';
 import PayPalBtn from '../Checkout/paypal';
 import DraggableDialog from '../CheckoutModel/CheckoutModel';
 import RadioButtonsGroup from '../CheckoutModel/Select';
+import CheckOutFormDialog from '../CheckoutModel/CheckoutModel';
 
 class Packs extends Component {
     constructor(props) {
@@ -50,26 +51,28 @@ const PackagesList = ({ SubPacks }) => (
       {SubPacks.map(SubPacks => (
         <div key={SubPacks} id="li1">
           <Paper id="product">
-                <img src={SubPacks.Basic.Img}></img>
+          <img src="Basic.jpeg" id="super"></img>
                 <h3>{SubPacks.Basic.Price}</h3>
                 <hr></hr>
                 <h4>{SubPacks.Basic.name}</h4>
                 <h5>{SubPacks.Basic.Details}</h5>
-                <DraggableDialog></DraggableDialog>
+                <CheckOutFormDialog></CheckOutFormDialog>
             </Paper>
             <Paper id="product1">
+            <img src="premium.jpeg" id="super"></img>
                 <h3>{SubPacks.Premium.Price}</h3>
                 <hr></hr>
                 <h4>{SubPacks.Premium.name}</h4>
                 <h5>{SubPacks.Premium.Details}</h5>
-                <DraggableDialog></DraggableDialog>
+                <CheckOutFormDialog></CheckOutFormDialog>
             </Paper>
             <Paper id="product2">
+              <img src="super.jpeg" id="super"></img>
                 <h3>{SubPacks.Super.Price}</h3>
                 <hr></hr>
                 <h4>{SubPacks.Super.name}</h4>
                 <h5>{SubPacks.Super.Details}</h5>
-                <DraggableDialog></DraggableDialog>
+                <CheckOutFormDialog></CheckOutFormDialog>
             </Paper> 
          </div>
       ))}
@@ -77,6 +80,3 @@ const PackagesList = ({ SubPacks }) => (
   );
 
 export default withFirebase(Packs);
-{/* <Button variant="outlined" color="primary" onClick={this.handleClickOpen} id="checkout" outlined color="inherit">
-Check Out!
-</Button> */}

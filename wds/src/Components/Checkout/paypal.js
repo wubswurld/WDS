@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import PaypalExpressBtn from 'react-paypal-express-checkout';
  
 class PayPalBtn extends Component {
+    state = {
+            total: ''
+    }
   render(){
+    //   console.log(this.state.total)
     const onSuccess = (payment) => {
         // Congratulation, it came here means everything's fine!
                 console.log("The payment was succeeded!", payment);
@@ -26,14 +30,20 @@ class PayPalBtn extends Component {
     let currency = 'USD'; // or you can set this value from your props or state
     let total = 1; // same as above, this is the total amount (based on currency) to be paid by using Paypal express checkout
     // Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
-
+    let style = {
+        'label':'pay',
+        'tagline': false,
+        'size':'small',
+        'shape':'rect',
+        'color':'blue'
+    };
     const client = {
         sandbox:    'AZT_dBYydwex8yyEx3sLMLzIncAuM4obHaFVZ4s66kT5_MaSJfeHzd5WzXl4zKReIdKcb7afoW80S8g3',
         production: 'AQNCrx40i1H7Dyyx_O7ykiFoVVS0ojH-yodMNReLGp9P3DjqUAHlYlqGO2_T36iFTVOO7IjNRpQP9U6T',
     }
     return (
         <>
-        <PaypalExpressBtn env={env} client={client} currency={currency} total={total} onError={onError} onSuccess={onSuccess} onCancel={onCancel} />
+        <PaypalExpressBtn env={env} client={client} currency={currency} style={style} total={total} onError={onError} onSuccess={onSuccess} onCancel={onCancel} />
         </>
     );
   }

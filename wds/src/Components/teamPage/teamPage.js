@@ -26,7 +26,7 @@ class TeamPage extends Component {
                             </div>
                             <div className="team-title">
                                 <h5>Elliot Friedman</h5>
-                                <span>Smart Contract Specialist</span>
+                                <span>Smart Contract Specialist <br></br> Hired by IBM in 2019</span>
                             </div>
                         </div>
                         <div className="col-md-4 col-sm-4">

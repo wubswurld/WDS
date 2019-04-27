@@ -1,27 +1,21 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Paper from '@material-ui/core/Paper';
-import Draggable from 'react-draggable';
-// import ControlledOpenSelect from './Select';
-// import RadioButtonsGroup from './Select';
+import PayPalBtn from '../Checkout/paypal';
+import ControlledOpenSelect from './Select'
+import MultipleSelect from './Select'
+class CheckOutFormDialog extends React.Component {
+        state = {
+        data: '',    
+        open: false,
+    };
 
-function PaperComponent(props) {
-  return (
-    <Draggable>
-      <Paper {...props} />
-    </Draggable>
-  );
-}
-
-class DraggableDialog extends React.Component {
-  state = {
-    open: false,
-  };
+    onChange = () => {}
 
   handleClickOpen = () => {
     this.setState({ open: true });
@@ -32,38 +26,35 @@ class DraggableDialog extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+      console.log(this.state.data)
     return (
       <div>
-        <Button variant="outlined" color="primary" onClick={this.handleClickOpen} id="checkout" outlined color="inherit">
-          Check Out!
+       <Button variant="outlined" color="primary" onClick={this.handleClickOpen} id="checkout" outlined color="inherit">
+            Check Out!
         </Button>
         <Dialog
           open={this.state.open}
           onClose={this.handleClose}
-          PaperComponent={PaperComponent}
-          aria-labelledby="draggable-dialog-title"
+          aria-labelledby="form-dialog-title"
         >
-          <DialogTitle id="draggable-dialog-title">
-            Buy Now!
-          </DialogTitle>
+          <DialogTitle id="form-dialog-title">Buy now for a one time payment!</DialogTitle>
           <DialogContent>
             <DialogContentText>
-                {/* <ControlledOpenSelect></ControlledOpenSelect> */}
+                Select The Package That Works For You.
             </DialogContentText>
+            <ControlledOpenSelect></ControlledOpenSelect>
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.handleClose} color="primary">
-              Subscribe
-            </Button>
+            <PayPalBtn></PayPalBtn>
           </DialogActions>
         </Dialog>
       </div>
     );
   }
 }
+// console.log(this.state.data)
 
-export default DraggableDialog;
+export default CheckOutFormDialog
