@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import DetailsModel from '../Model/DetailsModel';
 import { withFirebase } from '../Firebase';
-import PayPalBtn from '../Checkout/paypal';
+import PayPalBtn from '../CheckoutModel/paypal';
 import DraggableDialog from '../CheckoutModel/CheckoutModel';
 import RadioButtonsGroup from '../CheckoutModel/Select';
 import CheckOutFormDialog from '../CheckoutModel/CheckoutModel';
+import SubscribeFormDialog from '../SubscribeModel/MainModel';
 
 class Packs extends Component {
     constructor(props) {
@@ -49,7 +50,8 @@ class Packs extends Component {
 const PackagesList = ({ SubPacks }) => (
     <>
       {SubPacks.map(SubPacks => (
-        <div key={SubPacks} id="li1">
+        <div key={SubPacks} id="li1" className="com">
+        <div>
           <Paper id="product">
           <img src="Basic.jpeg" id="super"></img>
                 <h3>{SubPacks.Basic.Price}</h3>
@@ -57,7 +59,10 @@ const PackagesList = ({ SubPacks }) => (
                 <h4>{SubPacks.Basic.name}</h4>
                 <h5>{SubPacks.Basic.Details}</h5>
                 <CheckOutFormDialog></CheckOutFormDialog>
+                {/* <SubscribeFormDialog></SubscribeFormDialog> */}
             </Paper>
+            </div>
+            <div className="prod1">
             <Paper id="product1">
             <img src="premium.jpeg" id="super"></img>
                 <h3>{SubPacks.Premium.Price}</h3>
@@ -65,7 +70,10 @@ const PackagesList = ({ SubPacks }) => (
                 <h4>{SubPacks.Premium.name}</h4>
                 <h5>{SubPacks.Premium.Details}</h5>
                 <CheckOutFormDialog></CheckOutFormDialog>
+                {/* <SubscribeFormDialog></SubscribeFormDialog> */}
             </Paper>
+            </div>
+            <div className="prod2">
             <Paper id="product2">
               <img src="super.jpeg" id="super"></img>
                 <h3>{SubPacks.Super.Price}</h3>
@@ -73,7 +81,9 @@ const PackagesList = ({ SubPacks }) => (
                 <h4>{SubPacks.Super.name}</h4>
                 <h5>{SubPacks.Super.Details}</h5>
                 <CheckOutFormDialog></CheckOutFormDialog>
+                {/* <SubscribeFormDialog></SubscribeFormDialog> */}
             </Paper> 
+            </div>
          </div>
       ))}
     </>
