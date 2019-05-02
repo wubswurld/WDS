@@ -10,12 +10,11 @@ class TeamPage extends Component {
                         <div className="col-md-4 col-sm-4">
                             <div className="team-member">
                                 <div className="team-img">
-                                    <img src="34463580.jpeg" alt="team member" className="img-responsive"></img>
+                                    <img src="34463580.jpeg" alt="team member" className="img-responsive" id="eliot"></img>
                                 </div>
                                 <div className="team-hover">
                                     <div className="desk">
-                                        <h4>Hello There!</h4>
-                                        <p>I am Elliot Friedman, I have over two years of Smart Contract and DAPP experience!</p>
+                                        <p>I have been deeply involved in blockchain and cryptocurrencies for over five years. My background is in Software Engineering and brings a depth of knowledge from deconstructing blockchain concepts down to the byte-level. In my spare time, I also teach blockchain development and smart contract programming to corporate IT teams.</p>
                                     </div>
                                     <div className="s-link">
                                         <a href="#"><i className="fab fa-facebook"></i></a>
@@ -32,12 +31,11 @@ class TeamPage extends Component {
                         <div className="col-md-4 col-sm-4">
                             <div className="team-member">
                                 <div className="team-img">
-                                    <img src="IMG_0819_2_400x400.jpg" alt="team member" className="img-responsive"></img>
+                                    <img src="IMG_0819_2_400x400.jpg" alt="team member" className="img-responsive" id="wub"></img>
                                 </div>
                                 <div className="team-hover">
                                     <div className="desk">
-                                        <h4>Hi</h4>
-                                        <p>I Founded Scalable Solutions to bring you high quality Internet needs at a fraction of the cost!</p>
+                                        <p> I specialize in Front-end and Back-end Web app creation. With over two years of coding experience in languages such as C, Node.js React, Js and Jquery, I can complete any Website need you have while creating secure backend platforms. I manage the Social Media Marketing side of the bussiness where I study strategy and technique almost guranteed to bring conversion positive results</p>
                                     </div>
                                     <div className="s-link">
                                         <a href="https://www.facebook.com/jackwatters123"><i className="fab fa-facebook"></i></a>
@@ -54,12 +52,11 @@ class TeamPage extends Component {
                         <div className="col-md-4 col-sm-4">
                             <div className="team-member">
                                 <div className="team-img">
-                                    <img src="21209803.jpeg" alt="team member" className="img-responsive"></img>
+                                    <img src="21209803.jpeg" alt="team member" className="img-responsive" id="curt"></img>
                                 </div>
                                 <div className="team-hover">
                                     <div className="desk">
-                                        <h4>I love to design</h4>
-                                        <p>Any problem you give me, Ill Solve</p>
+                                        <p>I am a talented and motivated software engineer residing in the Bay Area I have extensive knowledge in backend / frontend web development, as well as developing end to end systems. The languages I frequently use include C, Node.js, Python, html / css, and countless other api’s and frameworks I use on a daily basis.</p>
                                     </div>
                                     <div className="s-link">
                                         <a href="#"><i className="fab fa-facebook"></i></a>
