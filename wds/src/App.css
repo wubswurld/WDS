@@ -403,6 +403,26 @@
   animation-fill-mode: both;
 }
 
+#listul1 {
+  width: 100%;
+  /* position: absolute; */
+  /* left: 50%; */
+  margin-top: 25px;
+  margin-left: -5%;
+}
+
+ #listli1 {
+  position: relative;
+  display: block;
+  /* border: 1px solid rgb(58, 55, 56); */
+  margin-bottom: 5px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  /* animation: fadeIn 3s; */
+  /* animation-fill-mode: both; */
+}
+
 /* Set delay per List Item */
 @for $i from 1 through $total-items {
   li:nth-child(#{$i}) {
@@ -701,4 +721,26 @@ p:last-child{
 
 #abouttitle {
   padding-top: 2%;
+}
+
+#acctpaper {
+  width: 40%;
+  margin-left: 9%;
+  margin-top: 5%;
+  padding: 2%;
+}
+
+#acctpaper2 {
+  width: 40%;
+  padding: 2%;
+  margin-top: -24.2%;
+  margin-right: 9%;
+  float: right;
+}
+
+.react-form1 {
+  width: 500px;
+}
+#dp {
+  margin-left: 5%;
 }
