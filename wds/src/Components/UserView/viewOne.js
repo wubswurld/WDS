@@ -22,6 +22,7 @@ import {
 import SignUpPage from '../SignUp/SignUpForm';
 import SignOutButton from '../signOut/index';
 import Packs from '../Packs/Packs';
+import Consult from '../Packs/Consult';
 
 
 // import Navigation from '../Navbar/navbar';
@@ -49,6 +50,9 @@ class ViewOne extends Component {
             <br></br>
             <div className="packs">
               <Packs authUser={authUser}></Packs>
+            </div>
+            <div id="consult">
+            <Consult></Consult>
             </div>
           </div>
           <footer id="footer2"></footer>
