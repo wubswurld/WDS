@@ -37,38 +37,51 @@ class Packs extends Component {
       }
     render() {
         const { SubPacks, loading } = this.state;
-        console.log(SubPacks);
+        const { authUser } = this.props; 
+        // console.log(open)
         return(
             
             <div>
             {loading && <div>Loading ...</div>}
-            <PackagesList SubPacks={SubPacks} />
+            <PackagesList SubPacks={SubPacks} authUser={authUser}/>
             </div>
         )
     }
 }
-const PackagesList = ({ SubPacks }) => (
+const PackagesList = ({ SubPacks, authUser }) => (
     <>
       {SubPacks.map(SubPacks => (
         <div key={SubPacks} id="li1" className="com">
         <div>
           <Paper id="product">
           <img src="Basic.jpeg" id="super"></img>
-                <h3>{SubPacks.Basic.Price}</h3>
-                <hr></hr>
-                <h4>{SubPacks.Basic.name}</h4>
-                <h5>{SubPacks.Basic.Details}</h5>
-                <CheckOutFormDialog></CheckOutFormDialog>
+                <h3 id="hey">{SubPacks.Basic.Price}</h3>
+                {/* <h4>{SubPacks.Basic.name}</h4> */}
+                <ul id="listul">
+                  <li id="listli">Strategic Ad Campaigns</li>
+                  <li id="listli">Social Media Management</li>
+                  <li id="listli">Trending Content Creation</li>
+                  <li id="listli">Google Keyword Optimization</li>
+                  <li id="listli">1 week trial period</li>
+                  <li id="listli"><i className="fab fa-facebook-square fa-2x" id="fb"></i><i className="fab fa-linkedin fa-2x" id="link"></i><i className="fab fa-snapchat fa-2x" id="snap"></i><i id="instag" className="fab fa-instagram fa-2x"></i><i id="goog" className="fab fa-google fa-2x"></i></li>
+                </ul>
+                {/* <h5>{SubPacks.Basic.Details}</h5> */}
+                <CheckOutFormDialog authUser={authUser}></CheckOutFormDialog>
                 {/* <SubscribeFormDialog></SubscribeFormDialog> */}
             </Paper>
             </div>
             <div className="prod1">
             <Paper id="product1">
             <img src="premium.jpeg" id="super"></img>
-                <h3>{SubPacks.Premium.Price}</h3>
-                <hr></hr>
-                <h4>{SubPacks.Premium.name}</h4>
-                <h5>{SubPacks.Premium.Details}</h5>
+                <h3 id="hey">{SubPacks.Premium.Price}</h3>
+                <ul id="listul">
+                  <li id="listli">Strategic Ad Campaigns</li>
+                  <li id="listli">Social Media Management</li>
+                  <li id="listli">Trending Content Creation</li>
+                  <li id="listli">Google Keyword Optimization</li>
+                  <li id="listli">1 week trial period</li>
+                  <li id="listli"><i className="fab fa-facebook-square fa-2x" id="fb"></i><i className="fab fa-linkedin fa-2x" id="link"></i><i className="fab fa-snapchat fa-2x" id="snap"></i><i id="instag" className="fab fa-instagram fa-2x"></i><i id="goog" className="fab fa-google fa-2x"></i></li>
+                </ul>
                 <CheckOutFormDialog></CheckOutFormDialog>
                 {/* <SubscribeFormDialog></SubscribeFormDialog> */}
             </Paper>
@@ -76,10 +89,15 @@ const PackagesList = ({ SubPacks }) => (
             <div className="prod2">
             <Paper id="product2">
               <img src="super.jpeg" id="super"></img>
-                <h3>{SubPacks.Super.Price}</h3>
-                <hr></hr>
-                <h4>{SubPacks.Super.name}</h4>
-                <h5>{SubPacks.Super.Details}</h5>
+                <h3 id="hey">{SubPacks.Super.Price}</h3>
+                <ul id="listul">
+                  <li id="listli">Strategic Ad Campaigns</li>
+                  <li id="listli">Social Media Management</li>
+                  <li id="listli">Trending Content Creation</li>
+                  <li id="listli">Google Keyword Optimization</li>
+                  <li id="listli">1 week trial period</li>
+                  <li id="listli"><i className="fab fa-facebook-square fa-2x" id="fb"></i><i className="fab fa-linkedin fa-2x" id="link"></i><i className="fab fa-snapchat fa-2x" id="snap"></i><i id="instag" className="fab fa-instagram fa-2x"></i><i id="goog" className="fab fa-google fa-2x"></i></li>
+                </ul>
                 <CheckOutFormDialog></CheckOutFormDialog>
                 {/* <SubscribeFormDialog></SubscribeFormDialog> */}
             </Paper> 

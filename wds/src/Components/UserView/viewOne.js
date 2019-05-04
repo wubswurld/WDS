@@ -26,7 +26,7 @@ import Packs from '../Packs/Packs';
 
 // import Navigation from '../Navbar/navbar';
 
-class viewOne extends Component {
+class ViewOne extends Component {
     constructor(props) {
         super(props);
     
@@ -41,13 +41,14 @@ class viewOne extends Component {
         });
       }
     render() {
+      const { authUser } = this.props;
         return (
         <div>
           <div>
             <h3>Current Social Marketing Plans</h3>
             <br></br>
             <div className="packs">
-              <Packs></Packs>
+              <Packs authUser={authUser}></Packs>
             </div>
           </div>
           <footer id="footer2"></footer>
@@ -55,4 +56,4 @@ class viewOne extends Component {
         )
     }
 }
-export default viewOne;
+export default ViewOne;

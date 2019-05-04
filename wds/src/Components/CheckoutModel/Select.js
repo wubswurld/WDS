@@ -39,7 +39,7 @@ class ControlledOpenSelect extends React.Component {
 
   render() {
     //destructuring object
-    const { classes, controlOpen, controlClose, controlSelect, value, controlChange } = this.props;
+    const { classes, value, controlChange } = this.props;
     // console.log(this.state.Price);
     return (
       <form autoComplete="off">
