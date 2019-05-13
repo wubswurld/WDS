@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Paper from '@material-ui/core/Paper';
 
 class TeamPage extends Component {
     render() {
@@ -14,7 +15,7 @@ class TeamPage extends Component {
                                 </div>
                                 <div className="team-hover">
                                     <div className="desk">
-                                        <p>I have been deeply involved in blockchain and cryptocurrencies for over five years. My background is in Software Engineering and brings a depth of knowledge from deconstructing blockchain concepts down to the byte-level. In my spare time, I also teach blockchain development and smart contract programming to corporate IT teams.</p>
+                                        <p>I have been deeply involved in blockchain and cryptocurrencies for over five years. My background is in Software Engineering and brings a depth of knowledge from deconstructing blockchain concepts down to the byte-level. In my spare time, I teach blockchain development and smart contract programming to corporate IT teams.</p>
                                     </div>
                                     <div className="s-link">
                                         <a href="#"><i className="fab fa-facebook"></i></a>
@@ -31,7 +32,7 @@ class TeamPage extends Component {
                         <div className="col-md-4 col-sm-4">
                             <div className="team-member">
                                 <div className="team-img">
-                                    <img src="IMG_0819_2_400x400.jpg" alt="team member" className="img-responsive" id="wub"></img>
+                                    <img src="0.jpeg" alt="team member" className="img-responsive" id="wub"></img>
                                 </div>
                                 <div className="team-hover">
                                     <div className="desk">
